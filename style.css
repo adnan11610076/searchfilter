@@ -1,0 +1,82 @@
+body {
+   
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Helvetica Neue", sans-serif;
+}
+.main-container{
+    height: 100vh;
+    margin-top: 3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: unset;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    padding: 0;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.blurred-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    filter: blur(30px);
+    z-index: 1;
+
+    /* Mask gradient fade */
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+.content {
+    position: absolute;
+    bottom: 1rem;
+    left: 4px;
+    color: white;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.4;
+}
+.form-control:focus{
+    color: #000 !important;
+}
